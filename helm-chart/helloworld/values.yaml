@@ -23,3 +23,5 @@ hello:
       port: 80
   ingress:
       enabled: false
+  ServiceAccount:
+      name: "prometheus-alertmanager"
