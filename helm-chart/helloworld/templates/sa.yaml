@@ -2,6 +2,6 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   labels:
-    app: {{ .Values.namespace }}
-  name: {{ .Values.namespace }}
+    app: {{ .Values.hello.ServiceAccount.name }}
+  name: {{ .Values.hello.ServiceAccount.name }}
   namespace: {{ .Values.namespace }}
