@@ -19,7 +19,7 @@ spec:
       labels:
         app: {{ .Values.namespace }}
     spec: 
-      serviceAccountName: {{ .Values.namespace }}
+      serviceAccountName: {{ .Values.hello.ServiceAccount.name }}
       containers:
         - name: {{ .Values.namespace }}
           env: 
