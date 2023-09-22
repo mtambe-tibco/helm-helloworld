@@ -1,11 +1,11 @@
 # common values at global level. 
-namespace: hello
+namespace: mtdp
 
 # micro-service specific values inside each service subsection.
 hello:
   image: 
-    name: a5hut0sh/helloworld
-    tag: '1.0'
+    name: nginx
+    tag: 'latest'
     pullpolicy: IfNotPresent
   container:
     port: 8080
@@ -23,5 +23,3 @@ hello:
       port: 80
   ingress:
       enabled: false
-  ServiceAccount:
-      name: "prometheus-alertmanager"

@@ -6,7 +6,7 @@ metadata:
   labels:
     app: {{ .Values.namespace }}
     chart: {{ template "helloworld.chart" . }}
-    release: {{ .Release.Name }}
+    release: hellowworld
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.hello.replicas }}
@@ -19,7 +19,6 @@ spec:
       labels:
         app: {{ .Values.namespace }}
     spec: 
-      serviceAccountName: {{ .Values.hello.ServiceAccount.name }}
       containers:
         - name: {{ .Values.namespace }}
           env: 
